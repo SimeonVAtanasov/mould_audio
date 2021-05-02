@@ -1,3 +1,8 @@
+@font-face {
+  src: url("../../fonts/NunitoSans-SemiBold.ttf");
+  font-family: NunitoSans-SemiBold;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -6,12 +11,13 @@ html {
   overflow-y: scroll;
 }
 body {
+  background-color: rgb(250 250 250);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
+  font-family: NunitoSans-SemiBold ,georgia, serif;
+  font-weight: 600;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -53,9 +59,18 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  color: #000;
 }
-a:active,
 a:hover {
+  color: lightgray;
+}
+
+a:active {
+  outline-width: 0;
+  color: #000;
+}
+a:visited {
   outline-width: 0;
 }
 abbr[title] {

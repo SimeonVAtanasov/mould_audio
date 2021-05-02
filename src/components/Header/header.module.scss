@@ -1,0 +1,40 @@
+.header {
+  background-color: #e8e9e4;
+  height: 4.4rem;
+}
+
+.navBar {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  .navLinks {
+    display: block;
+  }
+
+  .logoText{
+    order: -1;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navBar {
+    width: 75%;
+
+    .navLinks {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .navBar {
+    width: 960px;
+
+    .navLinks {
+      display: block;
+    }
+  }
+}
