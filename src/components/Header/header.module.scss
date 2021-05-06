@@ -12,11 +12,14 @@
   
   .navLinks {
     display: block;
+    list-style:  none;
+
+    .navLink{
+      text-decoration: none;
+    }
   }
 
-  .logoText{
-    order: -1;
-  }
+  
 }
 
 @media only screen and (min-width: 600px) {

@@ -2,66 +2,80 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import * as styles from "./header.module.scss"
-import Nav from "react-bootstrap/Nav"
-import Navbar from "react-bootstrap/Navbar"
+import * as styles from "./HeaderMobile.module.scss"
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import MenuIcon from '@material-ui/icons/Menu';
 
+const HeaderMobile = ({ siteTitle }) => {
+    const [isOpen, setIsopen] = React.useState(false);
 
-const Header = ({ siteTitle }) => (
-    <header className={styles.header}>
-        <Navbar expand="lg" className={styles.navBar} >
-            <Link
-                to="/"
-                className={styles.logoText}
-            >
-                <StaticImage
-                    src="../../images/mouldLogoText.png"
-                    width={200}
-                    quality={80}
-                    formats={["AUTO", "WEBP", "AVIF"]}
-                    alt="MOULD AUDIO"
-                />
-            </Link>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav>
-                    <Link
-                        to="/about"
-                        className={styles.navLinks}
-                    >
-                        ABOUT
-                </Link>
-                    <Link
-                        to="/releases"
-                        className={styles.navLinks}
-                    >
-                        RELEASES
-                </Link>
-                    <Link
-                        to="/radio"
-                        className={styles.navLinks}
-                    >
-                        RADIO
-                </Link>
-                    <Link
-                        to="/store"
-                        className={styles.navLinks}
-                    >
-                        STORE
-                </Link>
-                </Nav>
+    const toggleDrawer = (state) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
 
-            </Navbar.Collapse>
-        </Navbar>
-    </header>
-)
+        setIsopen(state);
+    };
+    const list = () => (
+        <div
+            role="presentation"
+            onClick={toggleDrawer(false)}
+            onKeyDown={toggleDrawer(false)}
+        >
+            <List>
+                {['ABOUT', 'RELEASES', 'RADIO', 'STORE'].map((text) => (
+                    <ListItem button key={text}>
+                        <Link
+                            to="/releases"
+                            className={styles.navLink}
+                        >
+                            {text}
+                        </Link>
+                    </ListItem>
+                ))}
+            </List>
 
-Header.propTypes = {
+        </div>
+    );
+    return (
+        <header className={styles.header}>
+            <nav className={styles.navBar} >
+                <ul >
+                    <li className={styles.navLinks}>
+                        <Link
+                            to="/"
+                            className={styles.navLink}
+                        >
+                            <StaticImage
+                                src={`../../../public/images/mouldLogoText.png`}
+                                width={200}
+                                quality={80}
+                                formats={["AUTO", "WEBP", "AVIF"]}
+                                alt="MOULD AUDIO"
+                            />
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+            <Button onClick={toggleDrawer(true)}>
+                <MenuIcon />
+            </Button>
+            <Drawer anchor={"right"} open={isOpen} onClose={toggleDrawer(false)}>
+                {list()}
+            </Drawer>
+        </header>
+    )
+}
+
+HeaderMobile.propTypes = {
     siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+HeaderMobile.defaultProps = {
     siteTitle: ``,
 }
 
-export default Header
+export default HeaderMobile

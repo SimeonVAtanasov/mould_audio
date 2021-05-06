@@ -9,14 +9,13 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "../Header/Header"
 import HeaderMobile from "../Header/HeaderMobile"
+import Header from "../Header/Header"
+
 
 import "./layout.css"
 
 const Layout = ({ children }) => {
-
-  const [isMobile, setIsMobile] = React.useState(true)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,18 +26,26 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const [isMobile, setIsMobile] = React.useState(true);
+
+  React.useEffect(() => {
+    if (window.innerWidth > 600) {
+      setIsMobile(false)
+    }
+  }, [])
+
 
   return (
     <>
-      { isMobile ? <HeaderMobile siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} /> : <Header siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} />}
+      {isMobile ? <HeaderMobile siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} /> : <Header siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} />}
       <div
         style={{
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
           display: "flex",
-          flexDirection:"column",
-          justifyContent:"center",
+          flexDirection: "column",
+          justifyContent: "center",
           alignItems: "center"
         }}
       >
@@ -58,9 +65,7 @@ const Layout = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          © mould.audio {new Date().getFullYear()}
         </footer>
       </div>
     </>

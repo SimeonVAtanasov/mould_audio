@@ -6,43 +6,61 @@ import * as styles from "./header.module.scss"
 
 const Header = ({ siteTitle }) => (
   <header className={styles.header}>
-    <nav className={styles.navBar} >
-      <Link
-        to="/about"
-        className={styles.navLinks}
-      >
-        ABOUT
-      </Link>
-      <Link
-        to="/releases"
-        className={styles.navLinks}
-      >
-        RELEASES
-      </Link>
-      <Link
-        to="/"
-        className={styles.logoText}
-      >
-        <StaticImage
-          src="../../images/mouldLogoText.png"
-          width={200}
-          quality={80}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="MOULD AUDIO"
-        />
-      </Link>
-      <Link
-        to="/radio"
-        className={styles.navLinks}
-      >
-        RADIO
-      </Link>
-      <Link
-        to="/store"
-        className={styles.navLinks}
-      >
-        STORE
-      </Link>
+    <nav  >
+      <ul className={styles.navBar}>
+        <li className={styles.navLinks}>
+          <Link
+            to="/about"
+            className={styles.navLink}
+          >
+            ABOUT
+          </Link>
+        </li>
+
+        <li className={styles.navLinks} >
+          <Link
+            to="/releases"
+            className={styles.navLink}
+          >
+            RELEASES
+          </Link>
+        </li>
+        <li className={styles.navLinks}>
+          <Link
+            to="/"
+          >
+            <StaticImage
+              src={`../../../public/images/mouldLogoText.png`}
+              width={200}
+              quality={80}
+              formats={["AUTO", "WEBP", "AVIF"]}
+              alt="MOULD AUDIO"
+            />
+          </Link>
+        </li>
+        <li className={styles.navLinks}>
+          <Link
+            to="/radio"
+            className={styles.navLink}
+          >
+            RADIO
+          </Link>
+        </li>
+        <li className={styles.navLinks}>
+          <Link
+            to="/store"
+            className={styles.navLink}
+          >
+            STORE
+          </Link>
+        </li>
+
+      </ul>
+
+
+
+
+
     </nav>
   </header>
 )

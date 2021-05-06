@@ -1,0 +1,43 @@
+.header {
+    background-color: #e8e9e4;
+    height: 4.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  
+  .navBar {
+    width: 100%;
+    margin-top: 2em;
+    
+    .navLinks {
+      display: block;
+      list-style:  none;
+  
+      .navLink{
+        text-decoration: none;
+      }
+    }
+  
+}
+
+// @media only screen and (min-width: 600px) {
+//   .navBar {
+//     width: 75%;
+
+//     .navLinks {
+//       display: block;
+//     }
+//   }
+// }
+
+// @media only screen and (min-width: 1000px) {
+//   .navBar {
+//     width: 960px;
+
+//     .navLinks {
+//       display: block;
+//     }
+//   }
+// }
