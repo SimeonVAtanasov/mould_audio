@@ -76,7 +76,7 @@ function Seo({ description, lang, meta, title }) {
 Seo.defaultProps = {
   lang: `en`,
   meta: [],
-  description: ``,
+  description: `Mold Audio is Berlin Based Record Label curated by Ruben Ganev`,
 }
 
 Seo.propTypes = {

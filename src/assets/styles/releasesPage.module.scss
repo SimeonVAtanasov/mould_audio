@@ -1,0 +1,12 @@
+.pageTitleContainer {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+    .pageTitle {
+      display: none;
+    }
+    & > p {
+        font-style: italic;
+    }
+  }
+  

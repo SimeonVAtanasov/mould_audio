@@ -8,38 +8,38 @@ import * as styles from "../assets/styles/radioPage.module.scss"
 const Radio = () => {
     const data = useStaticQuery(graphql`
     query MyQuery {
-        allPodcastsJson {
-          edges {
-            node {
-              id
-              text
-              extension
-              img {
-                childImageSharp {
-                  gatsbyImageData
-                }
+      allPodcastsJson {
+        edges {
+          node {
+            id
+            img {
+              childImageSharp {
+                gatsbyImageData
               }
             }
+            text
+            extension
           }
         }
-      }`
+      }
+    }`
     );
 
-    let [podcasts, setPodcasts] = React.useState([])
+    let [podcasts, setPodcasts] = React.useState([]);
 
     React.useEffect(() => {
-        let arr = []
-        data.allPodcastsJson.edges.map(podcast => arr.push(podcast.node))
-        setPodcasts(arr)
-    }, [data])
+        let arr = [];
+        data.allPodcastsJson.edges.map(podcast => arr.push(podcast.node));
+        setPodcasts(arr);
+    }, [data]);
 
 
     return (
         <Layout>
             <Seo title="Radio" />
             <div className={styles.pageTitleContainer}>
-                <h1 className={styles.pageTitle}>Radio</h1>
-                <p>Listen your favorite podcasts</p>
+                <h1 className={styles.pageTitle}>Releases</h1>
+                <p>Listen your favorite releases</p>
             </div>
             <div className={styles.podcastsWrapper}>
                 {podcasts.map(podcast =>
