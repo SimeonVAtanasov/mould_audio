@@ -1,12 +1,41 @@
 .pageTitleContainer {
-    width: 100%;
-    margin-top: 1rem;
-    text-align: center;
-    .pageTitle {
-      display: none;
-    }
-    & > p {
-        font-style: italic;
-    }
+  width: 100%;
+  margin-top: 1rem;
+  text-align: center;
+  .pageTitle {
+    display: none;
   }
-  
+  & > p {
+    font-style: italic;
+  }
+}
+
+.releaseContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0.6em;
+}
+
+@media only screen and (min-width: 600px) {
+  .textBox {
+    max-width: 550px;
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .releaseContainer {
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 0.6em;
+
+    .coverBox {
+      width: 350px;
+    }
+
+    
+  }
+}

@@ -38,8 +38,7 @@ const Radio = () => {
         <Layout>
             <Seo title="Radio" />
             <div className={styles.pageTitleContainer}>
-                <h1 className={styles.pageTitle}>Releases</h1>
-                <p>Listen your favorite releases</p>
+                <p>Listen your favorite podcasts</p>
             </div>
             <div className={styles.podcastsWrapper}>
                 {podcasts.map(podcast =>

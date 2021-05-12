@@ -12,11 +12,12 @@
 
 .podcastsWrapper {
   max-width: 100%;
-  cursor: pointer;
+  
 
   .podcastCoverImg {
     margin: 0.5em;
     position: relative;
+    cursor: pointer;
   }
 
   .coverText {
@@ -60,7 +61,7 @@
 
 @media only screen and (min-width: 1000px) {
   .pageTitleContainer {
-    text-align: start;
+    text-align: center;
     width: 100%;
     margin-left: 1.2em;
     margin-top: 1em;

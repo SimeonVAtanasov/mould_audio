@@ -1,0 +1,88 @@
+.footerWrapper {
+  width: 100%;
+  background-color: #e8e9e4;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-top: 2rem;
+  padding: 1em 0 1em 0;
+  .footerContainer {
+    height: 1.6em;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    .socialMediaBox {
+      order: 1;
+      width: 60%;
+      display: flex;
+      display: none;
+      justify-content: space-between;
+    }
+
+    .mailBox {
+      width: 300px;
+      // margin: 0 auto;
+
+      & form > div {
+        // width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .footerWrapper {
+    .footerContainer {
+      height: 1.6em;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .socialMediaBox {
+        display: block;
+        order: 0;
+        width: 200px;
+        margin-left: 4em;
+        margin-right: 1em;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .mailBox {
+        margin: 0;
+        & form > div {
+          // width: 5vw;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .footerWrapper {
+    .footerContainer {
+      height: 1.6em;
+      margin: 0 auto;
+      width: 1000px;
+      justify-content: space-between;
+
+      .socialMediaBox {
+        margin: 0 0 0 1.4em;
+        order: 0;
+        width: 10vw;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .mailBox {
+        padding-top: 3px;
+        width: 150px;
+
+        & form > div {
+          width: 300px;
+        }
+      }
+    }
+  }
+}

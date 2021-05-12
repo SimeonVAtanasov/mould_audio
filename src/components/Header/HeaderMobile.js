@@ -7,8 +7,8 @@ import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import MenuIcon from '@material-ui/icons/Menu';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 const HeaderMobile = ({ siteTitle }) => {
     const [isOpen, setIsopen] = React.useState(false);
 
@@ -29,7 +29,7 @@ const HeaderMobile = ({ siteTitle }) => {
                 {['ABOUT', 'RELEASES', 'RADIO', 'STORE'].map((text) => (
                     <ListItem button key={text}>
                         <Link
-                            to="/releases"
+                            to={`/${text.toLowerCase()}`}
                             className={styles.navLink}
                         >
                             {text}
@@ -51,7 +51,7 @@ const HeaderMobile = ({ siteTitle }) => {
                         >
                             <StaticImage
                                 src={`../../../public/images/mouldLogoText.png`}
-                                width={200}
+                                width={150}
                                 quality={80}
                                 formats={["AUTO", "WEBP", "AVIF"]}
                                 alt="MOULD AUDIO"
@@ -61,7 +61,7 @@ const HeaderMobile = ({ siteTitle }) => {
                 </ul>
             </nav>
             <Button onClick={toggleDrawer(true)}>
-                <MenuIcon />
+                <FontAwesomeIcon icon={faBars} size="lg"/>
             </Button>
             <Drawer anchor={"right"} open={isOpen} onClose={toggleDrawer(false)}>
                 {list()}

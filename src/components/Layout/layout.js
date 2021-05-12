@@ -8,12 +8,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import HeaderMobile from "../Header/HeaderMobile"
 import Header from "../Header/Header"
 
 
 import "./layout.css"
+import Footer from "../Footer/Footer";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          // padding: `0 1.0875rem 1.45rem`,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
       >
         <main
           style={{
-            width: '100%',
+            // width: '100%',
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -60,13 +60,7 @@ const Layout = ({ children }) => {
         >
           {children}
         </main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © mould.audio {new Date().getFullYear()}
-        </footer>
+        <Footer/>
       </div>
     </>
   )

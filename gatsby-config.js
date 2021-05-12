@@ -4,7 +4,9 @@ module.exports = {
     description: `Mold Audio is Berlin Based Record Label curated by Ruben Ganev`,
     author: `@Simeon Atanasov`
   },
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
+    `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
