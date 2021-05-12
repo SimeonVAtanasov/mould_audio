@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/mould_audio",
   siteMetadata: {
     title: `MOULD AUDIO`,
     description: `Mold Audio is Berlin Based Record Label curated by Ruben Ganev`,
