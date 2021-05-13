@@ -5,6 +5,7 @@ module.exports = {
     author: `@Simeon Atanasov`
   },
   flags: { PRESERVE_WEBPACK_CACHE: true },
+  pathPrefix: "/mould_audio",
   plugins: [
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-sass`,
