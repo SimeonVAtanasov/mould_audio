@@ -68,10 +68,10 @@ const Releases = () => {
                 {release.text}
               </p>
               <Link className={styles.link} to={`/player/${release.id}`}>
-                  <span>
-                    <FontAwesomeIcon icon={faPlay} size="lg" />
-                  </span>
-                  <span className={styles.linkText}>Listen</span>
+                <span>
+                  <FontAwesomeIcon icon={faPlay} size="lg" />
+                </span>
+                <span className={styles.linkText}>Listen</span>
               </Link>
             </div>
           </div>
