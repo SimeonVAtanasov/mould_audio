@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[500],{9721:function(e,t,a){"use strict";a.r(t);var n=a(7294),r=a(5444),l=a(948),u=a(3751);t.default=function(){return n.createElement(l.Z,null,n.createElement(u.Z,{title:"Store"}),n.createElement("h1",null,"That is going to be the store page"),n.createElement(r.Link,{to:"/"},"Go back to the homepage"))}}}]);
+//# sourceMappingURL=component---src-pages-store-js-ac4295863c75faa5e8a0.js.map
