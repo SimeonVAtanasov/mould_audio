@@ -1,9 +1,11 @@
 .playerWrapper {
+  width: 100%;
   .playerContainer {
     & iframe {
       border: none;
-      width: 350px;
-      height: 350px;
+      width: 300px;
+      height: 300px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -21,7 +23,28 @@
 
 @media only screen and (min-width: 1000px) {
   .playerWrapper {
-    margin-top: 6vh;
+    margin-top: 8vh;
+    display: flex;
+    justify-content: space-evenly;
+    .contentWrapper {
+      margin-left: -4em;
+      margin-right: 10em;
+
+      .titleContainer {
+        margin-top: 6em;
+
+        & > p {
+          margin-top: -1em;
+        }
+      }
+
+      .contentContainer {
+        margin-top: 3.4em;
+        & li {
+          margin-bottom: 3px;
+        }
+      }
+    }
 
     .playerContainer {
       & iframe {

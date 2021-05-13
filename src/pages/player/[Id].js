@@ -2,9 +2,8 @@ import * as React from "react"
 import Layout from "../../components/Layout/layout"
 import Seo from "../../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import * as styles from "../../assets/styles/playerPage.module.scss"
-import { playerQuery } from "../../assets/queries/playerQuery"
+
 const Player = (props) => {
 
   const data = useStaticQuery(graphql`
@@ -53,27 +52,36 @@ const Player = (props) => {
     }
   }`);
 
-  let [podcastsPlayers, setPodcastsPlayers] = React.useState(null);
+  let [players, setPlayers] = React.useState(null);
 
   React.useEffect(() => {
-    setPodcastsPlayers(data.allPlayerJson.edges[0].node);
-  }, [podcastsPlayers]);
+    setPlayers(data.allPlayerJson.edges[0].node);
+  }, [players]);
 
 
   return (
     <Layout>
       <Seo title="Player" />
       <div className={styles.playerWrapper}>
-        <div>
-          <div></div>
-          <div>
-            <ol>
+        <div className={styles.contentWrapper}>
+          <div className={styles.titleContainer}>
+            <h1>
+              {players && players[props.Id].title}
+            </h1>
+            <p>
+              {players && players[props.Id].author}
+            </p>
+          </div>
 
+          <div className={styles.contentContainer}>
+            <ol>
+              {players && players[props.Id].content.map((record) => <li>{record}</li>)}
             </ol>
           </div>
         </div>
+
         <div className={styles.playerContainer}>
-          {podcastsPlayers && <div dangerouslySetInnerHTML={{ __html: podcastsPlayers[props.Id].player }}></div>}
+          {players && <div dangerouslySetInnerHTML={{ __html: players[props.Id].player }}></div>}
         </div>
       </div>
     </Layout>

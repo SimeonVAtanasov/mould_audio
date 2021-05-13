@@ -10,32 +10,118 @@
   }
 }
 
-.releaseContainer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 0.6em;
-}
+.releasesWrapper {
+  .releaseContainer {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0.6em;
+    .coverBox {
+      width: 300px;
+      height: 300px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5),
+        0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    }
+    .link {
+      background-color: #e8e9e4;
+      position: relative;
+      display: block;
+      width: 100px;
+      height: 44px;
+      border: 1px solid gray;
+      padding: 10px;
+      overflow: hidden;
+      .linkText {
+        position: absolute;
+        margin-left: 0.5em;
+      }
 
+      &:hover .linkText {
+        display: inline-block;
+        color: black;
+      }
+    }
+  }
+}
 @media only screen and (min-width: 600px) {
   .textBox {
     max-width: 550px;
     margin-left: 2em;
   }
+  .releasesWrapper {
+    .releaseContainer {
+      width: 100%;
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 0.6em;
+      .coverBox {
+        width: 350px;
+        height: 350px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5),
+          0 6px 20px 0 rgba(0, 0, 0, 0.5);
+      }
+      .link {
+        position: relative;
+        display: block;
+        width: 46px;
+        height: 52px;
+        border: 1px solid gray;
+        padding: 10px;
+        overflow: hidden;
+        .linkText {
+          position: absolute;
+          margin-left: 0.5em;
+        }
+
+        &:hover .linkText {
+          display: inline-block;
+          color: black;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1000px) {
-  .releaseContainer {
-    width: 100%;
-    flex-direction: row;
-    margin-bottom: 0.6em;
+  .releasesWrapper {
+    margin-bottom: 6em;
+    .releaseContainer {
+      width: 100%;
+      flex-direction: row;
+      margin-bottom: 0.6em;
 
-    .coverBox {
-      width: 350px;
+      .coverBox {
+        width: 350px;
+      }
+      .link {
+        font-size: 24px;
+        position: relative;
+        display: block;
+        width: 48px;
+        height: 52px;
+        border: 1px solid gray;
+        padding: 10px;
+        overflow: hidden;
+        transition: all ease 0.2s;
+        .linkText {
+          position: absolute;
+          display: none;
+          margin-left: 0.5em;
+          margin-top: 0.1em;
+        }
+
+        &:hover .linkText {
+          display: inline-block;
+          color: black;
+        }
+        &:hover {
+          width: 130px;
+        }
+      }
     }
-
-    
   }
 }
