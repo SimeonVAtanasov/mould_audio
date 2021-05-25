@@ -2,11 +2,9 @@ import * as React from "react"
 import Layout from "../components/Layout/layout"
 import Seo from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import * as styles from "../assets/styles/releasesPage.module.scss"
-import { Link } from "gatsby"
-import { faPlay } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import ReleaseCard from "../components/ReleaseCard/releaseCard"
 
 const Releases = () => {
   const data = useStaticQuery(graphql`
@@ -17,6 +15,11 @@ const Releases = () => {
               by
               id
               img {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+              imgBack {
                 childImageSharp {
                   gatsbyImageData
                 }
@@ -47,34 +50,7 @@ const Releases = () => {
       </div>
       <div className={styles.releasesWrapper}>
         {releases.map(release =>
-          <div key={release.id} className={styles.releaseContainer} >
-            <div className={styles.coverBox}>
-              <GatsbyImage
-                image={350}
-                alt={release.id}
-              />
-
-            </div>
-            <div className={styles.textBox}>
-              <div>
-                <h2>
-                  {release.name}
-                </h2>
-                <span>[{release.id}]</span>
-                <p>by: {release.by}</p>
-              </div>
-
-              <p>
-                {release.text}
-              </p>
-              <Link className={styles.link} to={`/player/${release.id}`}>
-                <span>
-                  <FontAwesomeIcon icon={faPlay} size="lg" />
-                </span>
-                <span className={styles.linkText}>Listen</span>
-              </Link>
-            </div>
-          </div>
+          <ReleaseCard key={release.id} release={release} />
         )}
       </div>
     </Layout>

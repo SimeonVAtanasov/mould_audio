@@ -1,56 +1,10 @@
 import * as React from "react"
 import Layout from "../../components/Layout/layout"
 import Seo from "../../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
 import * as styles from "../../assets/styles/playerPage.module.scss"
-
+import { useAllReleases } from "../../assets/queries/useAllReleases"
 const Player = (props) => {
-
-  const data = useStaticQuery(graphql`
-  query yQuery {
-    allPlayerJson {
-      edges {
-        node {
-          MLD006 {
-            player
-            title
-            author
-            content
-          }
-          MLD005 {
-            player
-            title
-            author
-            content
-          }
-          MLD004 {
-            player
-            title
-            author
-            content
-          }
-          MLD003 {
-            player
-            title
-            author
-            content
-          }
-          MLD002 {
-            player
-            title
-            author
-            content
-          }
-          MLD001 {
-            player
-            title
-            author
-            content
-          }
-        }
-      }
-    }
-  }`);
+  const data = useAllReleases()
 
   let [players, setPlayers] = React.useState(null);
 

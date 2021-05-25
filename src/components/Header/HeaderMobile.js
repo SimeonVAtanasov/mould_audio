@@ -2,13 +2,14 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import * as styles from "./HeaderMobile.module.scss"
+import * as styles from "./headerMobile.module.scss"
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 const HeaderMobile = ({ siteTitle }) => {
     const [isOpen, setIsopen] = React.useState(false);
 

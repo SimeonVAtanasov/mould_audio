@@ -4,6 +4,7 @@ import Seo from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import * as styles from "../assets/styles/radioPage.module.scss"
+import { Link } from "gatsby"
 
 const Radio = () => {
     const data = useStaticQuery(graphql`
@@ -47,12 +48,11 @@ const Radio = () => {
                             image={podcast.img.childImageSharp.gatsbyImageData}
                             width={350}
                             alt={podcast.text}
-                            className={"#"}
                         />
-                        <div className={styles.coverText}>
+                        <Link to={`/player/${podcast.id}`} className={styles.coverText}>
                             <p>Click here to listen</p>
                             <p>{podcast.text}</p>
-                        </div>
+                        </Link>
                     </div>
                 )}
             </div>

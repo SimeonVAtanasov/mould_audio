@@ -5,6 +5,8 @@
         "by":"Ruben Ganev",
         "text":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
         "img":"../../images/seeker.jpg",
+        "imgBack":"../../images/seeker_back.jpg",
+
         "extension":"jpg"
     },
     {
@@ -13,6 +15,7 @@
         "by":"9beats",
         "text":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
         "img":"../../images/planetaryStorm.jpg",
+        "imgBack":"../../images/planetaryStorm_back.jpg",
         "extension":"jpg"
     },
     {
@@ -21,6 +24,7 @@
         "by":"Ruben Ganev",
         "text":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
         "img":"../../images/portal12.jpg",
+        "imgBack":"../../images/portal12_back.jpg",
         "extension":"jpg"
     },
     {
@@ -29,6 +33,7 @@
         "by":"Sejon",
         "text":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
         "img":"../../images/798district.jpg",
+        "imgBack":"../../images/798district_back.jpg",
         "extension":"jpg"
     },
     {
@@ -37,6 +42,7 @@
         "by":"Ruben Ganev",
         "text":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
         "img":"../../images/spx23.jpg",
+        "imgBack":"../../images/spx23_back.jpg",
         "extension":"jpg"
     },
     {
@@ -45,6 +51,8 @@
         "by":"Ruben Ganev",
         "text":"Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
         "img":"../../images/totem.jpg",
+        "imgBack":"../../images/totem_back.jpg",
         "extension":"jpg"
+
     }
 ]
