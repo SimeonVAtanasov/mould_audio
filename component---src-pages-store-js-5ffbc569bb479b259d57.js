@@ -1,0 +1,2 @@
+(self.webpackChunkmould_audio=self.webpackChunkmould_audio||[]).push([[500],{9721:function(e,t,n){"use strict";n.r(t);var a=n(7294),l=n(5444),o=n(4908),u=n(3751);t.default=function(){return a.createElement(o.Z,null,a.createElement(u.Z,{title:"Store"}),a.createElement("h1",null,"That is going to be the store page"),a.createElement(l.Link,{to:"/"},"Go back to the homepage"))}}}]);
+//# sourceMappingURL=component---src-pages-store-js-5ffbc569bb479b259d57.js.map
