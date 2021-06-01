@@ -23,7 +23,6 @@ const IndexPage = () => {
             className={styles.centeredLogo}
           />
         </div>
-
       </div>
     </Layout>
   )

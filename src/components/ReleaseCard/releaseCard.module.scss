@@ -2,6 +2,7 @@
   width: 100%;
   display: flex !important;
   justify-content: space-between;
+  gap: 1.5rem;
   align-items: center;
   flex-direction: column;
   margin-bottom: 0.6em;
@@ -17,16 +18,14 @@
     // height: 300px;
     .front,
     .back {
-      max-height: 350px;
+      max-height: 300px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5),
         0 6px 20px 0 rgba(0, 0, 0, 0.5);
       -webkit-backface-visibility: hidden;
       -moz-backface-visibility: hidden;
       -o-backface-visibility: hidden;
       backface-visibility: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
+      
       -webkit-transition: -webkit-transform 1.5s;
       -moz-transition: -moz-transform 1.5s;
       -o-transition: -o-transform 1.5s;
@@ -46,6 +45,9 @@
       -o-transform: rotateY(180deg);
       transform: rotateY(180deg);
       z-index: 3;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
     &:hover .front{
       -webkit-transform: rotateY(-180deg);
@@ -80,6 +82,10 @@ transform: rotateY(-180deg);
       color: black;
     }
   }
+
+  .textBox {
+    margin: 0 2em;
+  }
 }
 @media only screen and (min-width: 600px) {
   .textBox {
@@ -95,6 +101,10 @@ transform: rotateY(-180deg);
     .coverBox {
       width: 350px;
       height: 350px;
+      .front,
+    .back {
+      max-height: 350px;
+    }
       //   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5),
       //     0 6px 20px 0 rgba(0, 0, 0, 0.5);
     }
@@ -109,6 +119,7 @@ transform: rotateY(-180deg);
       .linkText {
         position: absolute;
         margin-left: 0.5em;
+        display: none;
       }
 
       &:hover .linkText {
@@ -123,7 +134,7 @@ transform: rotateY(-180deg);
   .releaseContainer {
     flex-direction: row;
     margin-bottom: 0.6em;
-
+    margin-top: 3em;
     .coverBox {
       width: 350px;
     }

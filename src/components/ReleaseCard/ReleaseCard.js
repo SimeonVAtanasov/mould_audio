@@ -9,20 +9,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const ReleaseCard = ({ siteTitle, release }) => (
     <div className={styles.releaseContainer} >
         <div className={styles.coverBox}>
-            <div className={styles.front}>
-                <GatsbyImage
-                    image={release.img.childImageSharp.gatsbyImageData}
-                    width={350}
-                    alt={release.id}
-                />
-            </div>
-            <div className={styles.back}>
-                <GatsbyImage
-                    image={release.imgBack.childImageSharp.gatsbyImageData}
-                    width={350}
-                    alt={release.id}
-                />
-            </div>
+                <div className={styles.front}>
+                    <GatsbyImage
+                        image={release.img.childImageSharp.gatsbyImageData}
+                        maxWidth={350}
+                        alt={release.id}
+                    />
+                </div>
+                <div className={styles.back}>
+                    <GatsbyImage
+                        image={release.imgBack.childImageSharp.gatsbyImageData}
+                        maxWidth={350}
+                        alt={release.id}
+                    />
+                </div>
         </div>
         <div className={styles.textBox}>
             <div>

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-top: 3em;
+  margin-top: 20vh;
 
   .vision {
     display: none;
@@ -31,8 +31,6 @@
   .mainWrapper {
     max-width: 960px;
     flex-direction: row;
-    margin-top: 12vh;
-
     .vision {
       display: block;
     }
