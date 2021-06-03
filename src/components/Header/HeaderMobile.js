@@ -11,14 +11,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const HeaderMobile = ({ siteTitle }) => {
-    const [isOpen, setIsopen] = React.useState(false);
+    const [isOpen, setIsOpen] = React.useState(false);
 
     const toggleDrawer = (state) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
 
-        setIsopen(state);
+        setIsOpen(state);
     };
     const list = () => (
         <div

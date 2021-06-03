@@ -1,0 +1,39 @@
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: flex-end;
+  align-items: center;
+  .textBox {
+    margin: 0 3em;
+  }
+  .link {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .listContainer {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+    .link {
+      width: inherit;
+    }
+    .btn {
+      width: 150px;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .btn {
+      width: 120px;
+    }
+}

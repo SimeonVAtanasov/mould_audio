@@ -22,11 +22,6 @@
 
     .mailBox {
       width: 300px;
-      // margin: 0 auto;
-
-      & form > div {
-        // width: 100%;
-      }
     }
   }
 }
@@ -51,9 +46,6 @@
 
       .mailBox {
         margin: 0;
-        & form > div {
-          // width: 5vw;
-        }
       }
     }
   }

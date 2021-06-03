@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import HeaderMobile from "../Header/HeaderMobile"
 import Header from "../Header/Header"
-
+import CookiePolicy from "../CookiePolicy/CookiePolicy"
 
 import "./layout.css"
 import Footer from "../Footer/Footer";
@@ -54,6 +54,7 @@ const Layout = ({ children }) => {
         </main>
       </div>
       <Footer />
+      <CookiePolicy />
     </>
   )
 }
