@@ -6,6 +6,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import setCookie from "../../assets/common/setCookie"
 
 export default function EmailSubscription() {
@@ -15,9 +16,11 @@ export default function EmailSubscription() {
     const [email, setEmail] = React.useState("");
 
     const handleSubscription = () => {
-        //  this function will send the entered email
+        //  this function will send the entered email to email service
         // should implement verification of the email
-        // cookie logic work good
+        // cookie logic works good
+
+
 
         console.log(email);
         setCookie("subscription", true, 365) // expires in one year
@@ -48,9 +51,15 @@ export default function EmailSubscription() {
 
     return (
         <div>
-            {/* <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-                Open form dialog
-            </Button> */}
+            <Button onClick={handleClickOpen}>
+                <strong style={{
+                    marginRight: "6px",
+                    letterSpacing: '2px'
+                }}>
+                    Subscribe
+                </strong>
+                <FontAwesomeIcon icon={['far', 'envelope']} size="lg" />
+            </Button>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
                 <DialogContent>
@@ -71,12 +80,18 @@ export default function EmailSubscription() {
                     />
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose} color="primary">
+                    <Button onClick={handleClose} >
                         Cancel
-          </Button>
-                    <Button onClick={handleSubscription} color="primary">
-                        Subscribe
-          </Button>
+                    </Button>
+                    <Button onClick={handleSubscription} >
+                        <strong style={{
+                            marginRight: "6px",
+                            letterSpacing: '2px'
+                        }}>
+                            Subscribe
+                </strong>
+                        <FontAwesomeIcon icon={['far', 'bell']} size="lg" />
+                    </Button>
                 </DialogActions>
             </Dialog>
         </div>

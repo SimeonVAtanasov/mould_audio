@@ -28,7 +28,7 @@ const HeaderMobile = ({ siteTitle }) => {
         >
             <List>
                 {['ABOUT', 'RELEASES', 'RADIO', 'STORE'].map((text) => (
-                    <ListItem button key={text}>
+                    <ListItem key={text}>
                         <Link
                             to={`/${text.toLowerCase()}`}
                             className={styles.navLink}
@@ -36,7 +36,36 @@ const HeaderMobile = ({ siteTitle }) => {
                             {text}
                         </Link>
                     </ListItem>
+
                 ))}
+
+                <ListItem style={{ justifyContent: "center" }}>~ Social ~</ListItem>
+
+                <ListItem>
+                    <a className={styles.navLink} href={"https://www.instagram.com/mould.audio/?hl=en"}>
+                        <FontAwesomeIcon icon={['fab', 'instagram']} size="lg" style={{ marginRight: "6px" }} />
+                        Instagram
+                    </a>
+                </ListItem>
+                <ListItem>
+                    <a className={styles.navLink} href={'https://www.facebook.com/mould.audio/'}>
+                        <FontAwesomeIcon icon={['fab', 'facebook']} size="lg" style={{ marginRight: "6px" }} />
+                        Facebook
+                    </a>
+                </ListItem>
+                <ListItem>
+                    <a className={styles.navLink} href={'https://open.spotify.com/artist/6ycFquApuIF6ApGoDpGTuf'}>
+                        <FontAwesomeIcon icon={['fab', 'spotify']} size="lg" style={{ marginRight: "6px" }} />
+                        Spotify
+                    </a>
+                </ListItem>
+                <ListItem>
+                    <a className={styles.navLink} href={"https://soundcloud.com/mouldaudio"}>
+                        <FontAwesomeIcon icon={['fab', 'soundcloud']} size="lg" style={{ marginRight: "6px" }} />
+                        Soundcloud
+                    </a>
+                </ListItem>
+
             </List>
 
         </div>
@@ -62,7 +91,7 @@ const HeaderMobile = ({ siteTitle }) => {
                 </ul>
             </nav>
             <Button onClick={toggleDrawer(true)}>
-                <FontAwesomeIcon icon={faBars} size="lg"/>
+                <FontAwesomeIcon icon={faBars} size="lg" />
             </Button>
             <Drawer anchor={"right"} open={isOpen} onClose={toggleDrawer(false)}>
                 {list()}

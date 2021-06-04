@@ -1,6 +1,5 @@
 import * as React from "react"
 import Layout from "../../components/Layout/layout"
-import EmailSubscription from "../../components/EmailSubscription/EmailSubscription"
 import Seo from "../../components/seo"
 import * as styles from "../../assets/styles/playerPage.module.scss"
 import { useAllReleases } from "../../assets/queries/useAllReleases"
@@ -15,7 +14,6 @@ const Player = (props) => {
 
 
   return (
-    <>
     <Layout>
       <Seo title="Player" />
       <div className={styles.playerWrapper}>
@@ -41,8 +39,6 @@ const Player = (props) => {
         </div>
       </div>
     </Layout>
-    <EmailSubscription/>
-    </>
   )
 }
 

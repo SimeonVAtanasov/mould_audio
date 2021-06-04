@@ -1,29 +1,31 @@
 .header {
-    background-color: #e8e9e4;
-    height: 2.4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #e8e9e4;
+  height: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
-  }
-  
-  .navBar {
-    width: 100%;
-    margin-top: 2em;
-    
-    .navLinks {
-      display: block;
-      list-style:  none;
+.navBar {
+  width: 100%;
+  margin-top: 2em;
 
-      & img {
-        padding-bottom: 6px;
-      }
-  
-      .navLink{
-        text-decoration: none;
+  .navLinks {
+    display: block;
+    list-style: none;
+
+    & img {
+      padding-bottom: 6px;
+    }
+
+    .navLink {
+      text-decoration: none;
+      :first-child {
+        margin-right: 6px !important;
       }
     }
-  
+  }
 }
 
 // @media only screen and (min-width: 600px) {
