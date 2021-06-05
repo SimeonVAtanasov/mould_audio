@@ -7,20 +7,20 @@ import ListItem from '@material-ui/core/ListItem';
 import setCookie from "../../assets/common/setCookie"
 
 const CookiePolicy = ({ siteTitle }) => {
-    let cookie = document.cookie;
     const [open, setOpen] = React.useState(false);
-
+    
     const toggleDrawer = (state) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
-
+        
         setOpen(state);
     };
-
+    
     React.useEffect(() => {
         let timeout;
-
+        let cookie = document.cookie;
+        
         if (!cookie.includes("consent=true")) {
             timeout = setTimeout(() => { setOpen(true) }, 800);
         }

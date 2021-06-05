@@ -11,33 +11,33 @@ import setCookie from "../../assets/common/setCookie"
 
 export default function EmailSubscription() {
     const minute = 60000;
-    const cookie = document.cookie;
     const [open, setOpen] = React.useState(false);
     const [email, setEmail] = React.useState("");
-
+    
     const handleSubscription = () => {
         //  this function will send the entered email to email service
         // should implement verification of the email
         // cookie logic works good
-
-
-
+        
+        
+        
         console.log(email);
         setCookie("subscription", true, 365) // expires in one year
-        console.log(cookie + " " + "cooki");
+        // console.log(cookie + " " + "cooki");
         handleClose();
     }
-
+    
     const handleClickOpen = () => {
         setOpen(true);
     };
-
+    
     const handleClose = () => {
         setOpen(false);
     };
-
+    
     React.useEffect(() => {
         let timeout;
+        const cookie = document.cookie;
 
         if (!cookie.includes("subscription=true")) {
             timeout = setTimeout(() => { setOpen(true) }, 2 * minute);
