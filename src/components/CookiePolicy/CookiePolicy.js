@@ -46,7 +46,7 @@ const CookiePolicy = ({ siteTitle }) => {
                 </ListItem>
                 <button className={styles.btn} onClick={handleConsent}>I accept</button>
                 <Link
-                    to={`cookiePolicy`}
+                    to={`/cookiePolicy`}
                     className={styles.link}
                 >
                     <button className={styles.btn}>CookiePolicy</button>

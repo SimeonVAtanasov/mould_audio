@@ -10,12 +10,7 @@ import EmailSubscription from "../EmailSubscription/EmailSubscription";
 library.add(fab, far)
 
 const Footer = ({ siteTitle }) => {
-    const [isValidMail, setIsValidMail] = React.useState(false)
-    const [mailValue, setMailValue] = React.useState('')
-
-    let handleInput = () => {
-
-    }
+   
     return (
         <footer
             className={styles.footerWrapper}
