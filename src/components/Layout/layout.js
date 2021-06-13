@@ -30,7 +30,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {isMobile ? <HeaderMobile siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} /> : <Header siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} />}
+      <HeaderMobile siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} />
+      <Header siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} />
       <div
         style={{
           margin: `0 auto`,
