@@ -19,11 +19,8 @@ export default function EmailSubscription() {
         // should implement verification of the email
         // cookie logic works good
         
-        
-        
         console.log(email);
         setCookie("subscription", true, 365) // expires in one year
-        // console.log(cookie + " " + "cooki");
         handleClose();
     }
     

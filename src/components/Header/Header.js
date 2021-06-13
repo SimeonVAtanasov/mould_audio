@@ -30,7 +30,7 @@ const Header = ({ siteTitle }) => (
             to="/"
           >
             <StaticImage
-              src={`../../../public/images/mouldLogoText.png`}
+              src={`../../../static/images/mouldLogoText.png`}
               width={200}
               quality={80}
               formats={["AUTO", "WEBP", "AVIF"]}

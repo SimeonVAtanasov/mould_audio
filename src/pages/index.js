@@ -15,7 +15,7 @@ const IndexPage = () => {
         </div>
         <div>
           <StaticImage
-            src={`../../public/images/logoWithoutBg.png`}
+            src={`../../static/images/logoWithoutBg.png`}
             width={350}
             quality={100}
             formats={["AUTO", "WEBP", "AVIF"]}

@@ -80,7 +80,7 @@ const HeaderMobile = ({ siteTitle }) => {
                             className={styles.navLink}
                         >
                             <StaticImage
-                                src={`../../../public/images/mouldLogoText.png`}
+                                src={`../../../static/images/mouldLogoText.png`}
                                 width={150}
                                 quality={80}
                                 formats={["AUTO", "WEBP", "AVIF"]}
