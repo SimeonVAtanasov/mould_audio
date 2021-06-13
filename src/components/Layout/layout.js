@@ -1,7 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import HeaderMobile from "../Header/HeaderMobile"
+import HeaderMobile from "../Header/HeaderMobile.js"
 import Header from "../Header/Header"
 import CookiePolicy from "../CookiePolicy/CookiePolicy"
 

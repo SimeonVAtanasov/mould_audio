@@ -4,7 +4,7 @@ import Seo from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import * as styles from "../assets/styles/releasesPage.module.scss"
 
-import ReleaseCard from "../components/ReleaseCard/releaseCard"
+import ReleaseCard from "../components/ReleaseCard/releaseCard.js"
 
 const Releases = () => {
   const data = useStaticQuery(graphql`
