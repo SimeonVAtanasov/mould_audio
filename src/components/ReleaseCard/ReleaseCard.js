@@ -6,23 +6,25 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const ReleaseCard = ({ siteTitle, release }) => (
+const ReleaseCard = ({ release }) => (
     <div className={styles.releaseContainer} >
         <div className={styles.coverBox}>
-                <div className={styles.front}>
-                    <GatsbyImage
-                        image={release.img.childImageSharp.gatsbyImageData}
-                        maxWidth={350}
-                        alt={release.id}
-                    />
-                </div>
-                <div className={styles.back}>
-                    <GatsbyImage
-                        image={release.imgBack.childImageSharp.gatsbyImageData}
-                        maxWidth={350}
-                        alt={release.id}
-                    />
-                </div>
+            <div className={styles.front}>
+                <GatsbyImage
+                    src={release.img.childImageSharp.gatsbyImageData.images.fallback.src}
+                    image={release.img.childImageSharp.gatsbyImageData}
+                    maxWidth={350}
+                    alt={release.id}
+                />
+            </div>
+            <div className={styles.back}>
+                <GatsbyImage
+                    src={release.imgBack.childImageSharp.gatsbyImageData.images.fallback.src}
+                    image={release.imgBack.childImageSharp.gatsbyImageData}
+                    maxWidth={350}
+                    alt={release.id}
+                />
+            </div>
         </div>
         <div className={styles.textBox}>
             <div>

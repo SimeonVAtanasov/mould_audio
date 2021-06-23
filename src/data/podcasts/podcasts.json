@@ -2,43 +2,43 @@
   {
     "id": "podcast_7",
     "text": "Podcast #7",
-    "img": "../../../static/images/podcast7.jpg",
+    "img": "../../../static/podcast7.jpg",
     "extension": "jpg"
   },
   {
     "id": "podcast_6",
     "text": "Podcast #6",
-    "img": "../../../static/images/podcast6.jpg",
+    "img": "../../../static/podcast6.jpg",
     "extension": "jpg"
   },
   {
     "id": "podcast_5",
     "text": "Podcast #5",
-    "img": "../../../static/images/podcast5.jpg",
+    "img": "../../../static/podcast5.jpg",
     "extension": "jpg"
   },
   {
     "id": "podcast_4",
     "text": "Podcast #4",
-    "img": "../../../static/images/podcast4.jpg",
+    "img": "../../../static/podcast4.jpg",
     "extension": "jpg"
   },
   {
     "id": "podcast_3",
     "text": "Podcast #3",
-    "img": "../../../static/images/podcast3.jpg",
+    "img": "../../../static/podcast3.jpg",
     "extension": "jpg"
   },
   {
     "id": "podcast_2",
     "text": "Podcast #2",
-    "img": "../../../static/images/podcast1_2.jpg",
+    "img": "../../../static/podcast1_2.jpg",
     "extension": "jpg"
   },
   {
     "id": "podcast_1",
     "text": "Podcast #1",
-    "img": "../../../static/images/podcast1_2.jpg",
+    "img": "../../../static/podcast1_2.jpg",
     "extension": "jpg"
   }
 ]

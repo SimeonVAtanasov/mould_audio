@@ -15,12 +15,11 @@ const IndexPage = () => {
         </div>
         <div>
           <StaticImage
-            src={`../../static/images/logoWithoutBg.png`}
+            src={`../../static/logoWithoutBg.png`}
             width={350}
             quality={100}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="MOULD AUDIO"
-            className={styles.centeredLogo}
           />
         </div>
       </div>
