@@ -7,7 +7,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import setCookie from "../../assets/common/setCookie"
+import setCookie from "../../assets/helpers/setCookie"
 
 export default function EmailSubscription() {
     const minute = 60000;

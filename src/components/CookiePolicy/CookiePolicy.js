@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import * as styles from "./cookiePolicy.module.scss"
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import setCookie from "../../assets/common/setCookie"
+import setCookie from "../../assets/helpers/setCookie"
 
 const CookiePolicy = ({ siteTitle }) => {
     const [open, setOpen] = React.useState(false);
