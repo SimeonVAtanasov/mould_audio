@@ -4,8 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import HeaderMobile from "../Header/HeaderMobile.js"
 import Header from "../Header/Header"
 import CookiePolicy from "../CookiePolicy/CookiePolicy"
-
-import "./layout.css"
+import "./resetCSS.css"
+import * as styles from "./layout.module.scss";
 import Footer from "../Footer/Footer";
 
 const Layout = ({ children }) => {
@@ -31,26 +31,9 @@ const Layout = ({ children }) => {
   return (
     <>
       {isMobile ? <HeaderMobile siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} /> :
-      <Header siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} />}
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 1200,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <main
-          style={{
-            // width: '100%',
-            // display: "flex",
-            // flexDirection: "column",
-            // justifyContent: "center",
-            // alignItems: "center",
-          }}
-        >
+        <Header siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} />}
+      <div className={styles.wrapper}      >
+        <main className={styles.main}        >
           {children}
         </main>
       </div>

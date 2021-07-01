@@ -11,7 +11,8 @@ const IndexPage = () => {
       <Seo title="Home" />
       <div className={styles.mainWrapper}>
         <div className={styles.vision}>
-          Your awesome text here
+          Berlin based Record Label, <br/>
+          curated by Ruben Ganev
         </div>
         <div>
           <StaticImage

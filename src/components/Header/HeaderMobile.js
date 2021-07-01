@@ -82,7 +82,7 @@ const HeaderMobile = ({ siteTitle }) => {
                             <StaticImage
                                 src={`../../../static/mouldLogoText.png`}
                                 width={150}
-                                quality={80}
+                                quality={100}
                                 formats={["AUTO", "WEBP", "AVIF"]}
                                 alt="MOULD AUDIO"
                             />

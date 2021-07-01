@@ -15,35 +15,15 @@
     display: block;
     list-style: none;
 
-    & img {
-      padding-bottom: 6px;
-    }
+    // & > img {
+    //   // padding-top: 6px;
+    // }
 
-    .navLink {
-      text-decoration: none;
-      :first-child {
-        margin-right: 6px !important;
-      }
-    }
+    // .navLink {
+    //   text-decoration: none;
+    //   :first-child {
+    //     margin-right: 6px !important;
+    //   }
+    // }
   }
 }
-
-// @media only screen and (min-width: 600px) {
-//   .navBar {
-//     width: 75%;
-
-//     .navLinks {
-//       display: block;
-//     }
-//   }
-// }
-
-// @media only screen and (min-width: 1000px) {
-//   .navBar {
-//     width: 960px;
-
-//     .navLinks {
-//       display: block;
-//     }
-//   }
-// }
