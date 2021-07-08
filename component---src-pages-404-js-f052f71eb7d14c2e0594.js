@@ -1,0 +1,2 @@
+(self.webpackChunkmould_audio=self.webpackChunkmould_audio||[]).push([[883],{9616:function(e,t,u){"use strict";u.r(t);var n=u(7294),l=u(4759),a=u(3751);t.default=function(){return n.createElement(l.Z,null,n.createElement(a.Z,{title:"404: Not found"}),n.createElement("h1",null,"404: Not Found"),n.createElement("p",null,"You just hit a route that doesn't exist... the sadness."))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-f052f71eb7d14c2e0594.js.map
