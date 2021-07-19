@@ -18,9 +18,9 @@ const About = () => (
           </p>
         </div>
 
-        <div className={styles.contentContainer}>
+        {/* <div className={styles.contentContainer}>
           sdgdfgdsfgsdfgsdfgsdfgsdfgdsfgsdfgsdfgsdfgsdsfgsdfgdfgdsg
-        </div>
+        </div> */}
       </div>
 
       <StaticImage

@@ -19,19 +19,10 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const [isMobile, setIsMobile] = React.useState(true);
-
-  React.useEffect(() => {
-    if (window.innerWidth > 600) {
-      setIsMobile(false)
-    }
-  }, [])
-
-
   return (
     <>
-      {isMobile ? <HeaderMobile siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} /> :
-        <Header siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} />}
+      <HeaderMobile className={styles.headerMobile} siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} />
+      <Header className={styles.header} siteTitle={data.site.siteMetadata?.title || `MOULD AUDIO`} />
       <div className={styles.wrapper}      >
         <main className={styles.main}        >
           {children}
