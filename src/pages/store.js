@@ -12,16 +12,16 @@ const Store = () => (
 
 
 
-    <div className={styles.playerWrapper}>
-      <div className={styles.contentWrapper}>
-        <div className={styles.titleContainer}>
+    <div className={styles.playerWrapper} style={{ flexDirection: 'column' }}>
+      <div className={styles.contentWrapper} style={{ margin: '0  1em' }}>
+        <div className={styles.titleContainer} >
           <h1>There is no store page yet,  </h1>
           <h3>
             but hey play a Tic-Tac-Toe game
           </h3>
         </div>
 
-          <Link to="/">Go back to the homepage</Link>
+        <Link to="/">Go back to the homepage</Link>
       </div>
 
       <TicTacToe />

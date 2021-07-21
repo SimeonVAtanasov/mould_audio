@@ -38,7 +38,6 @@ const Releases = () => {
     let arr = [];
     data.allReleasesJson.edges.map(release => arr.push(release.node));
     setReleases(arr);
-    console.log("🚀 ~ file: releases.js ~ line 41 ~ React.useEffect ~ arr", arr)
   }, [data]);
 
 

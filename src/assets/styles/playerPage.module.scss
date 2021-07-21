@@ -28,12 +28,14 @@
 
 @media only screen and (min-width: 1000px) {
   .playerWrapper {
-    margin-top: 8vh;
+    margin: 0 1em;
+    margin-top: 6vh;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: flex-start;
     .contentWrapper {
-      margin-left: -4em;
-      margin-right: 10em;
+      // margin-left: -4em;
+      // margin-right: 10em;
 
       .titleContainer {
         margin-top: 6em;
