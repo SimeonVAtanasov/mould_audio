@@ -10,12 +10,8 @@ const About = () => (
     <div className={styles.playerWrapper}>
       <div className={styles.contentWrapper}>
         <div className={styles.titleContainer}>
-          <h1>
-            Ruben Ganev
-          </h1>
-          <p>
-            Recording Artist, Dj & Founder of @mouldaudio
-          </p>
+          <h1>Ruben Ganev</h1>
+          <p>Recording Artist, Dj & Founder of @mouldaudio</p>
         </div>
 
         {/* <div className={styles.contentContainer}>
@@ -29,7 +25,12 @@ const About = () => (
         quality={100}
         formats={["AUTO", "WEBP", "AVIF"]}
         alt="Ruben Ganev"
-        style={{borderRadius: '50%'}}
+        style={{
+          borderRadius: "50%",
+          margin:  '2.5em 0.5em 5.5em 0.5em'
+          // marginBottom: "5.5em",
+          // marginTop:  '2.5em'
+        }}
       />
     </div>
   </Layout>

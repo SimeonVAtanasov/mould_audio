@@ -4,6 +4,25 @@
   flex-direction: column-reverse;
   align-items: center;
   width: 100%;
+  .contentWrapper {
+    // margin-left: -4em;
+    // margin-right: 10em;
+
+    // .titleContainer {
+    //   margin-top: 6em;
+
+    //   & > p {
+    //     margin-top: -1em;
+    //   }
+    // }
+
+    .contentContainer {
+      margin-bottom: 4.4em;
+      // & li {
+      //   margin-bottom: 3px;
+      // }
+    }
+  }
   .playerContainer {
     & iframe {
       border: none;

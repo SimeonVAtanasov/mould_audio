@@ -6,14 +6,13 @@
     display: none;
   }
   & > p {
-      font-style: italic;
+    font-style: italic;
   }
 }
 
 .podcastsWrapper {
   max-width: 100%;
   margin-bottom: 6em;
-  
 
   .podcastCoverImg {
     margin: 0.5em;
@@ -67,19 +66,19 @@
     margin-left: 1.2em;
     margin-top: 1em;
     .pageTitle {
+      margin-bottom: 0.5em;
       display: block;
     }
   }
   .podcastsWrapper {
-    width: 960px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding-top: 2vh;
+    padding-top: 1.5vh;
 
     .podcastCoverImg {
-      max-width: 270px;
-      max-height: 270px;
+      max-width: 300px;
+      max-height: 300px;
       object-fit: fill;
 
       .coverText {

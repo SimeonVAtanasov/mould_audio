@@ -39,14 +39,14 @@ const Radio = () => {
         <Layout>
             <Seo title="Radio" />
             <div className={styles.pageTitleContainer}>
-                <p>Listen your favorite podcasts</p>
+                <p className={styles.pageTitle}>Listen your favorite podcasts</p>
             </div>
             <div className={styles.podcastsWrapper}>
                 {podcasts.map(podcast =>
                     <div key={podcast.id} className={styles.podcastCoverImg} >
                         <GatsbyImage
                             image={podcast.img.childImageSharp.gatsbyImageData}
-                            width={350}
+                            width={250}
                             alt={podcast.text}
                         />
                         <Link to={`/player/${podcast.id}`} className={styles.coverText}>
