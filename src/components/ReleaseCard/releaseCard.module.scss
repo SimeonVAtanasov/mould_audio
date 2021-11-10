@@ -25,7 +25,6 @@
       -moz-backface-visibility: hidden;
       -o-backface-visibility: hidden;
       backface-visibility: hidden;
-      
       -webkit-transition: -webkit-transform 1.5s;
       -moz-transition: -moz-transform 1.5s;
       -o-transition: -o-transform 1.5s;
@@ -36,10 +35,10 @@
       transform-style: preserve-3d;
     }
     .front > div {
-      z-index: 1;
+      z-index: 4;
       // display: none !important;
     }
-    .back > div{
+    .back > div {
       -webkit-transform: rotateY(180deg);
       -moz-transform: rotateY(180deg);
       -o-transform: rotateY(180deg);
@@ -49,13 +48,14 @@
       top: 0;
       left: 0;
     }
-    &:hover .front > div{
+    &:hover .front > div {
+      z-index: 2;
       -webkit-transform: rotateY(-180deg);
       -moz-transform: rotateY(-180deg);
--o-transform: rotateY(-180deg);
-transform: rotateY(-180deg);
+      -o-transform: rotateY(-180deg);
+      transform: rotateY(-180deg);
     }
-    &:hover .back >  div {
+    &:hover .back > div {
       -webkit-transform: rotateY(0deg);
       -moz-transform: rotateY(0deg);
       -o-transform: rotateY(0deg);
@@ -102,9 +102,9 @@ transform: rotateY(-180deg);
       width: 350px;
       height: 350px;
       .front > div,
-    .back > div{
-      max-height: 350px;
-    }
+      .back > div {
+        max-height: 350px;
+      }
       //   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5),
       //     0 6px 20px 0 rgba(0, 0, 0, 0.5);
     }

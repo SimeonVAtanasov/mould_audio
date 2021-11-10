@@ -20,7 +20,7 @@ const About = () => (
       </div>
 
       <StaticImage
-        src={`https://i1.sndcdn.com/avatars-AtLiBNaGWkVHaOrd-3sVAUA-t500x500.jpg`}
+        src={`https://imgproxy.ra.co/_/quality:100/plain/https://static.ra.co/images/profiles/square/rubenganev.jpg?dateUpdated=1568283521000`}
         width={450}
         quality={100}
         formats={["AUTO", "WEBP", "AVIF"]}
